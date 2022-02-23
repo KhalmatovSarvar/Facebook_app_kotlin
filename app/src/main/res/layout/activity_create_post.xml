@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="facebook"
+            app:titleTextColor="@color/black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="16dp">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/id_back"
+                        android:layout_width="35dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_back"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Create Post"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+           <Button
+               android:background="@drawable/shape_border_rounded_button"
+               app:backgroundTint="@null"
+               android:id="@+id/btn_post"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Post"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="#cbcbcb" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_profile_post"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sarvar"
+            app:shapeAppearanceOverlay="@style/circle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_fullname_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sarvar Khalmatov"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edt_link"
+            android:padding="10dp"
+            android:textSize="22sp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="What`s new on your mind?"/>
+
+    <LinearLayout
+        android:id="@+id/ll_preview"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <com.google.android.material.imageview.ShapeableImageView
+          android:id="@+id/link_image_create_post"
+          android:layout_width="match_parent"
+          android:layout_height="260dp"
+          android:scaleType="centerCrop"
+          android:src="@color/white" />
+
+      <ImageView
+          android:id="@+id/btn_remove"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/ic_remove"
+          android:layout_gravity="right"
+          android:layout_margin="3dp"/>
+  </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/container_site_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#20000000"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_link_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:text="Title"
+            android:textColor="#90000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/description_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="20dp"
+            android:text="Description"
+            android:maxLines="2"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
